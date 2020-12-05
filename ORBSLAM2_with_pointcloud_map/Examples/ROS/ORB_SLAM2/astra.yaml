@@ -9,15 +9,15 @@ KeyboardDevice: /dev/input/event5
 #--------------------------------------------------------------------------------------------
 
 # Camera calibration and distortion parameters (OpenCV) 
-Camera.fx: 507.8066533497105
-Camera.fy: 507.8066533497105
-Camera.cx: 322.3317718505859
-Camera.cy: 248.8806838989258
+Camera.fx: 608.175105
+Camera.fy: 608.398081
+Camera.cx: 332.108897
+Camera.cy: 241.674149
 
-Camera.k1: 0.0
-Camera.k2: 0.0
-Camera.p1: 0.0
-Camera.p2: 0.0
+Camera.k1: 0.148135
+Camera.k2: -0.207328
+Camera.p1: -0.002464 
+Camera.p2: -0.002785
 
 Camera.width: 640
 Camera.height: 480
