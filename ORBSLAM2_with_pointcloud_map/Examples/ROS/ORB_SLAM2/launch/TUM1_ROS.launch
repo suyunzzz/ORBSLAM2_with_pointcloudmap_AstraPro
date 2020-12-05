@@ -1,0 +1,15 @@
+<launch>
+  <!-- <remap from="/camera/depth_registered/camera_info" to="/camera/depth/camera_info"/> -->
+  <!-- <remap from="/camera/depth_registered/image_raw" to="/camera/depth/image_raw"/> -->
+
+
+  <arg name="bag_path" value="/home/s/Downloads/rgbd_dataset_freiburg1_desk.bag"/>
+  <arg name="ORBVoc_path" default="/home/s/ORBSLAM2_with_pointcloud_map/Vocabulary/ORBvoc.bin"/>
+  <arg name="camera_info" default="/home/s/ORBSLAM2_with_pointcloud_map/Examples/ROS/ORB_SLAM2/TUM1_ROS.yaml" />
+  <arg name="rviz_path" default="/home/s/ORBSLAM2_with_pointcloud_map/Examples/ROS/ORB_SLAM2/config/rgbd_tum1.rviz" />
+
+  <node pkg="rosbag" type="play" name="playe" output="screen" args="--clock $(arg bag_path)"/>
+  
+  <node pkg="ORB_SLAM2" type="RGBD" name="rgbd_tum1" output="screen" args="$(arg ORBVoc_path) $(arg camera_info)"/>
+  <!-- <node pkg="rviz" type="rviz" name="rviz" output="screen" args="-d $(arg rviz_path)" /> -->
+</launch>
